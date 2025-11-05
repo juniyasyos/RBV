@@ -1,0 +1,577 @@
+/* Main CSS untuk Ruang Baca Virtual */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --primary-color: #1a5f7a;
+  --secondary-color: #57c4e5;
+  --accent-color: #f4a261;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --white: #ffffff;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BODY & GENERAL ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+/* ===== BACKGROUND FADE ===== */
+.background-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== NAVBAR TOP ===== */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text .main-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.top-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.jelajahi-portal,
+.login-btn {
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.jelajahi-portal:hover,
+.login-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.user-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.user-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===== NAVBAR BOTTOM ===== */
+.navbar-bottom {
+  background-color: var(--primary-color);
+  padding: 15px 50px;
+  box-shadow: var(--shadow);
+}
+
+.navbar-bottom-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.fitur-nav {
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.fitur-nav:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: var(--shadow);
+  z-index: 999;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== WELCOME SECTION ===== */
+.welcome {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.welcome-title h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.welcome-title span {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-description p {
+  font-size: 24px;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 50px;
+}
+
+.section h2,
+.grafik-section h2,
+.fasilitas h2,
+.artikel-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.grafik-section h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* ===== TREND BUKU ===== */
+.trend-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buku {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buku:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.buku img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.buku h3 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== GRAFIK SECTION ===== */
+.grafik-section {
+  padding: 60px 50px;
+  background-color: white;
+}
+
+.grafik-box {
+  position: relative;
+  height: 400px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ===== FASILITAS ===== */
+.fasilitas {
+  padding: 60px 50px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.konten-fasilitas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.balok-kanan {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.balok-kanan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.balok-kanan h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.balok-kanan .icon {
+  font-size: 30px;
+}
+
+.balok-kanan p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===== VIDEO SECTION ===== */
+.video {
+  padding: 60px 50px;
+  background-color: white;
+  text-align: center;
+}
+
+.video-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 450px;
+}
+
+/* ===== ARTIKEL SECTION ===== */
+.artikel-section {
+  padding: 60px 50px;
+}
+
+.artikel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artikel {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.artikel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.artikel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.artikel h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  padding: 15px 20px 10px;
+}
+
+.artikel p {
+  padding: 0 20px 20px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===== CENTER BUTTON ===== */
+.center-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tampilkan-lainnya {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tampilkan-lainnya:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 50px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+}
+
+.sosmed-icon {
+  font-size: 30px;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.sosmed-icon:hover {
+  color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar-top {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-bottom {
+    padding: 10px 20px;
+  }
+
+  .navbar-bottom-container ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .welcome-title h1 {
+    font-size: 32px;
+  }
+
+  .welcome-description p {
+    font-size: 18px;
+  }
+
+  .section,
+  .grafik-section,
+  .fasilitas,
+  .artikel-section {
+    padding: 40px 20px;
+  }
+
+  .trend-container,
+  .artikel-container,
+  .konten-fasilitas {
+    grid-template-columns: 1fr;
+  }
+
+  .grafik-box {
+    height: 300px;
+  }
+
+  footer {
+    padding: 30px 20px 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text .main-title {
+    font-size: 18px;
+  }
+
+  .welcome-title h1 {
+    font-size: 24px;
+  }
+
+  .section h2,
+  .grafik-section h2,
+  .fasilitas h2,
+  .artikel-section h2 {
+    font-size: 28px;
+  }
+}
