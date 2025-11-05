@@ -54,21 +54,21 @@ class WelcomeController extends Controller
                 'id' => 1,
                 'judul' => 'Pentingnya Pola Hidup Sehat',
                 'deskripsi' => 'Menerapkan pola hidup sehat dapat meningkatkan kualitas hidup dan mencegah berbagai penyakit.',
-                'image_url' => asset('images/artikel/artikel-1.jpeg'),
+                'image_url' => asset('images/artikel/artikel_1.jpg'),
                 'tanggal' => '2025-11-01',
             ],
             [
                 'id' => 2,
                 'judul' => 'Inovasi Teknologi Kesehatan',
                 'deskripsi' => 'Perkembangan teknologi dalam dunia kesehatan membawa perubahan signifikan dalam pelayanan medis.',
-                'image_url' => asset('images/artikel/artikel-2.jpeg'),
+                'image_url' => asset('images/artikel/artikel_2.jpg'),
                 'tanggal' => '2025-10-28',
             ],
             [
                 'id' => 3,
                 'judul' => 'Tips Menjaga Kesehatan Mental',
                 'deskripsi' => 'Kesehatan mental sama pentingnya dengan kesehatan fisik dalam kehidupan sehari-hari.',
-                'image_url' => asset('images/artikel/artikel-3.jpeg'),
+                'image_url' => asset('images/artikel/artikel_3.jpg'),
                 'tanggal' => '2025-10-25',
             ],
         ];
@@ -86,32 +86,32 @@ class WelcomeController extends Controller
             [
                 'id' => 1,
                 'judul' => 'KAMUS LENGKAP KEDOKTERAN',
-                'image_url' => asset('images/buku/buku-1.jpeg'),
+                'image_url' => asset('images/buku/book_1.jpg'),
             ],
             [
                 'id' => 2,
                 'judul' => 'MANAJEMEN INFORMASI KESEHATAN',
-                'image_url' => asset('images/buku/buku-2.jpeg'),
+                'image_url' => asset('images/buku/book_2.jpg'),
             ],
             [
                 'id' => 3,
                 'judul' => 'ANATOMI UNTUK MAHASISWA KEDOKTERAN GIGI',
-                'image_url' => asset('images/buku/buku-3.jpeg'),
+                'image_url' => asset('images/buku/book_3.jpg'),
             ],
             [
                 'id' => 4,
-                'judul' => 'KAMUS LENGKAP KEDOKTERAN',
-                'image_url' => asset('images/buku/buku-1.jpeg'),
+                'judul' => 'FARMAKOLOGI DASAR',
+                'image_url' => asset('images/buku/book_4.jpg'),
             ],
             [
                 'id' => 5,
-                'judul' => 'MANAJEMEN INFORMASI KESEHATAN',
-                'image_url' => asset('images/buku/buku-2.jpeg'),
+                'judul' => 'MIKROBIOLOGI MEDIS',
+                'image_url' => asset('images/buku/book_5.jpg'),
             ],
             [
                 'id' => 6,
-                'judul' => 'ANATOMI UNTUK MAHASISWA KEDOKTERAN GIGI',
-                'image_url' => asset('images/buku/buku-3.jpeg'),
+                'judul' => 'PATOLOGI KLINIK',
+                'image_url' => asset('images/buku/book_6.jpg'),
             ],
         ];
 
